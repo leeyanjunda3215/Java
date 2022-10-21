@@ -1,0 +1,7 @@
+mysql删除数据后id自增不连续的解决方法
+
+SET @i=0;
+
+UPDATE `bank` SET `id`=(@i:=@i+1);
+
+ALTER TABLE `bank` AUTO_INCREMENT=0
